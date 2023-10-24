@@ -11,6 +11,7 @@ module: {  }
 theme: {  }
 blacklist:
   - field.field.paragraph.body_copy.field_title
+  - system.site
 graylist:
   - core.entity_form_display.paragraph.body_copy.default
   - core.entity_view_display.paragraph.body_copy.default

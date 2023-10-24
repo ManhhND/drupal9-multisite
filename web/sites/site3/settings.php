@@ -844,3 +844,17 @@ $databases['default']['default'] = array(
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = '../config/sync';
+
+$config['config_split.config_split.default']['status'] = FALSE;
+$config['config_split.config_split.site2']['status'] = FALSE;
+$config['config_split.config_split.site3']['status'] = TRUE;
+
+$settings['tome_static_directory'] = 'sites/site3/static';
+
+// Workaround for permission issues with NFS shares
+$settings['file_chmod_directory'] = 0777;
+$settings['file_chmod_file'] = 0666;
+
+# File system settings.
+$config['system.file']['path']['temporary'] = '/tmp';
+// $settings['file_private_path'] = 'private-files';
