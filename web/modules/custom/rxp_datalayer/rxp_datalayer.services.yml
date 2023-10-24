@@ -1,0 +1,6 @@
+services:
+  rxp_datalayer.metadata:
+    class: Drupal\rxp_datalayer\NodeMetadataManager
+    arguments: 
+      - '@current_route_match'
+      - '@entity_type.manager'

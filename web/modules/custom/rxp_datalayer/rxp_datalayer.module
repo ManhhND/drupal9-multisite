@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_datalayer_meta().
+ *
+ * Defines default meta data.
+ */
+function rxp_datalayer_datalayer_meta() {
+  return [
+    'field_tags',
+    'field_paragraphs'
+  ];
+}
