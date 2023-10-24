@@ -17,6 +17,12 @@ Follow [Lando environment setup instructions](https://docs.lando.dev/getting-sta
     cd rxp-d9
     ```
 
+2. Run composer install
+
+    ```
+    lando composer install
+    ```
+
 2. Start the site
 
     ```
