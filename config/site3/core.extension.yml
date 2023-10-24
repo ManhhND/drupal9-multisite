@@ -41,6 +41,7 @@ module:
   path: 0
   path_alias: 0
   rdf: 0
+  redirect: 0
   rxp_datalayer: 0
   rxp_extended_datalayer: 0
   search: 0
