@@ -53,6 +53,16 @@ Follow [Lando environment setup instructions](https://docs.lando.dev/getting-sta
     lando drush @site.alias sqlc < db_name.sql
     ```
 
+## Static site generation
+
+1. From UI
+- Go to */admin/config/tome/static/generate*
+- Fill in the base URL and click **Submit** to generate
+- Go to */admin/config/tome/static/preview* to preview the generated static site
+
+2. Using CLI
+- Execute `lando drush -l my.domain.com tome:static`
+
 ## More automation with bash script
 
 New site provisioning can be automated executing `init-new-site.sh` script
