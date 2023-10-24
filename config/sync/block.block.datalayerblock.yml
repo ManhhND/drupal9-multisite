@@ -1,0 +1,25 @@
+uuid: cf340551-dd77-4a3d-b1ce-79609fde7929
+langcode: en
+status: true
+dependencies:
+  module:
+    - rxp_datalayer
+    - system
+  theme:
+    - bartik
+id: datalayerblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: rxp_datalayer_block
+settings:
+  id: rxp_datalayer_block
+  label: 'DataLayer Block'
+  label_display: visible
+  provider: rxp_datalayer
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
