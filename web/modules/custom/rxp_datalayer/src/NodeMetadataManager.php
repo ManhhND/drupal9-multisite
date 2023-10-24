@@ -5,8 +5,11 @@ namespace Drupal\rxp_datalayer;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 
+/**
+ * Class NodeMetadataManager.
+ */
 class NodeMetadataManager {
-  
+
   /**
    * The CurrentRouteMatch service.
    *
@@ -26,6 +29,8 @@ class NodeMetadataManager {
    *
    * @param \Drupal\Core\Routing\CurrentRouteMatch $route_match
    *   The config factory service.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager service.
    */
   public function __construct(CurrentRouteMatch $route_match, EntityTypeManagerInterface $entity_type_manager) {
     $this->currentRouteMatch = $route_match;
@@ -58,6 +63,9 @@ class NodeMetadataManager {
     return $metadata;
   }
 
+  /**
+   * Get entity info callback function.
+   */
   protected function getEntityInfo($entity) {
     return [
       'id' => $entity->id(),
@@ -65,4 +73,5 @@ class NodeMetadataManager {
       'bundle' => $entity->bundle()
     ];
   }
+
 }

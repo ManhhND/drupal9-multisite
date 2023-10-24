@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Hooks and callback.
+ */
+
+/**
  * Implements hook_datalayer_meta().
  *
  * Defines default meta data.

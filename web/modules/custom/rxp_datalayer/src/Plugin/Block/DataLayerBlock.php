@@ -19,7 +19,7 @@ class DataLayerBlock extends BlockBase implements ContainerFactoryPluginInterfac
 
   /**
    * The node metadata manager service.
-   * 
+   *
    * @var \Drupal\rxp_datalayer\NodeMetadataManager
    */
   protected $nodeMetadataManager;
