@@ -148,7 +148,7 @@ drush/sites/.checksums
 /.ht.router.php
 /.htaccess
 /INSTALL.txt
-/README.md
+# /README.md
 /autoload.php
 /example.gitignore
 /index.php
