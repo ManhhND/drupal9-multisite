@@ -101,6 +101,9 @@
         "patches": {
             "drupal/core": {
                 "Allow an install hook in profiles installing from configuration": "https://www.drupal.org/files/issues/2022-05-19/2982052-80.patch"
+            },
+            "drupal/tome": {
+                "Error with static generation on CLI": "https://www.drupal.org/files/issues/2023-09-19/tome_fix_error_when_passing_drush_parameters.patch"
             }
         }
     }

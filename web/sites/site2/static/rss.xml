@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="http://site2.lndo.site/">
   <channel>
-    <title>My Drupal 9 Site</title>
+    <title>Site 2</title>
     <link>http://site2.lndo.site/</link>
     <description/>
     <language>en</language>
