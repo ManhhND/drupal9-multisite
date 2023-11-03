@@ -55,23 +55,14 @@ class NodeMetadataManager {
       if ($node->hasField('field_paragraphs')) {
         foreach ($node->field_paragraphs->getValue() as $value) {
           $component = $this->entityTypeManager->getStorage('paragraph')->load($value['target_id']);
-          $metadata['components'][] = $this->getEntityInfo($component);
+          foreach ($component->getFields() as $name => $field) {
+            $component_fields[$name] = $field->getString();
+          }
+          $metadata['components'][] = $component_fields;
         }
       }
     }
 
     return $metadata;
   }
-
-  /**
-   * Get entity info callback function.
-   */
-  protected function getEntityInfo($entity) {
-    return [
-      'id' => $entity->id(),
-      'title' => $entity->label(),
-      'bundle' => $entity->bundle()
-    ];
-  }
-
 }

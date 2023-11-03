@@ -6,13 +6,19 @@
  */
 
 /**
- * Implements hook_datalayer_meta().
- *
- * Defines default meta data.
+ * Implements hook_page_bottom().
  */
-function rxp_datalayer_datalayer_meta() {
-  return [
-    'field_tags',
-    'field_paragraphs'
-  ];
+function rxp_datalayer_page_bottom(array &$page_bottom) {
+  if(\Drupal::routeMatch()->getRouteName() === 'entity.node.canonical') {
+    $metadata = \Drupal::service('rxp_datalayer.metadata')->getNodeMetadata();
+    $build['rxp_datalayer'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#value' => 'window.dataLayer = window.dataLayer || []; window.dataLayer.push(' . json_encode($metadata, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE) . ');',
+      '#cache' => [
+        'contexts' => ['user'],
+      ],
+    ];
+    $page_bottom['rxp_datalayer'] = $build;
+  }
 }

@@ -15,7 +15,9 @@ class ExtendedDatalayer extends NodeMetadataManager {
     if ($node->hasField('field_tags')) {
       foreach ($node->field_tags->getValue() as $value) {
         $tag = $this->entityTypeManager->getStorage('taxonomy_term')->load($value['target_id']);
-        $result['tags'][] = $this->getEntityInfo($tag);
+        $result['tags'][] = [
+          'tagName' => $tag->label(),
+        ];
       }
     }
     return $result;
